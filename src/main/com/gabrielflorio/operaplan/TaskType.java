@@ -5,27 +5,19 @@ import java.util.List;
 
 public class TaskType {
 
-    private final long id;
-    private String code;
+    private long id;
     private String title;
     private int baseDuration; // In minutes
 
     private List<Skill> requiredSkillList;
 
+    public TaskType() {}
+
     public TaskType(long id, String code, String title, int baseDuration) {
         this.id = id;
-        this.code = code;
         this.title = title;
         this.baseDuration = baseDuration;
         requiredSkillList = new ArrayList<>();
-    }
-
-    public String getCode() {
-        return code;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
     }
 
     public String getTitle() {
@@ -54,10 +46,14 @@ public class TaskType {
 
     @Override
     public String toString() {
-        return code;
+        return title;
     }
 
     public long getId() {
         return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 }

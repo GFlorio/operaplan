@@ -50,8 +50,6 @@ public class Task extends TaskOrEmployee {
         pinned = false;
     }
 
-    public long getId() { return id; }
-
     public TaskType getTaskType() {
         return taskType;
     }
